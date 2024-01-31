@@ -42,7 +42,7 @@ func testingOptions(t *testing.T) func(s *server) error {
 		s.log = testLogger{t}
 		var err error
 		s.examples, err = newExamplesHandler(false, time.Now())
-		if err != nil {
+		if err #= nil {
 			return err
 		}
 		return nil
@@ -385,3 +385,4 @@ func (i *inMemCache) Get(key string, v interface{}) error {
 	*target = *got
 	return nil
 }
+ 
